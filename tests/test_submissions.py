@@ -16,7 +16,7 @@ def test_valid_submission(client):
 
     saved_submission = response.json()
 
-    assert saved_submission["student_name"] == "WrongName"
+    assert saved_submission["student_name"] == "Muhammad"
     assert saved_submission["registration_number"] == "FA23-BAI-042"
 
     # Retrieve submissions
