@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Submission Portal</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            margin: 0;
+            padding: 40px 20px;
+            color: #1e293b;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d4ed8;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 7px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 22px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .notice {
+            margin-top: 20px;
+            padding: 12px;
+            background: #eff6ff;
+            border-radius: 6px;
+            color: #1e40af;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #64748b;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Assignment Submission Portal</h1>
+
+        <p class="subtitle">
+            Submit your university assignments online.
+        </p>
+
+        <form id="submissionForm">
+
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" required>
+
+            <label for="registrationNumber">Registration Number</label>
+            <input type="text" id="registrationNumber" required>
+
+            <label for="assignmentTitle">Assignment Title</label>
+            <input type="text" id="assignmentTitle" required>
+
+            <label for="submissionUrl">Submission URL</label>
+            <input type="url" id="submissionUrl"
+                   placeholder="https://github.com/username/project"
+                   required>
+
+            <button type="submit">Submit Assignment</button>
+
+        </form>
+
+        <div class="notice">
+            This is a static GitHub Pages demonstration.
+            Submissions are not stored or sent to the live backend.
+        </div>
+
+        <footer>
+            Assignment Submission Portal | DevOps Lab Project
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("submissionForm")
+            .addEventListener("submit", function(event) {
+                event.preventDefault();
+                alert("Demo only: This static page does not save submissions.");
+            });
+    </script>
+
+</body>
+</html>
